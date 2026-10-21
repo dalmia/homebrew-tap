@@ -5,20 +5,20 @@
 class Calibrate < Formula
   desc "Calibrate Public API: Programmatic API for CI/automation. Pass your key in the `X-API-Key` header."
   homepage "https://github.com/dalmia/calibrate-cli"
-  version "0.0.75"
+  version "0.0.76"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.75/calibrate-cli_Darwin_x86_64.tar.gz"
-      sha256 "efcd5997341671e08560624e34187cba77f93626a6020f8ebd7c1cf3098b2757"
+      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.76/calibrate-cli_Darwin_x86_64.tar.gz"
+      sha256 "8a01983033429a7b3fe7892c2e8aad3e2966963fae41e065f9df101153e07e43"
 
       define_method(:install) do
         bin.install "calibrate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.75/calibrate-cli_Darwin_arm64.tar.gz"
-      sha256 "b479d33feb8a8313f20db6e258d8f19fc76a77bb8d30be9d1b84aeb3b057e649"
+      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.76/calibrate-cli_Darwin_arm64.tar.gz"
+      sha256 "309f7f3b80fe19656bc4b0c43192ef499f2dc2ffcfba19981a4ad5fe7fa70473"
 
       define_method(:install) do
         bin.install "calibrate"
@@ -28,15 +28,15 @@ class Calibrate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.75/calibrate-cli_Linux_x86_64.tar.gz"
-      sha256 "7fe9cb3b909cd5ff31384903cba303f4a5c9398b58cb2f295944ae15bd55a242"
+      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.76/calibrate-cli_Linux_x86_64.tar.gz"
+      sha256 "a37470a26f4963f8da11d6797002632ff6aa1392d7ea1894ca55f86ddfefe67d"
       define_method(:install) do
         bin.install "calibrate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.75/calibrate-cli_Linux_arm64.tar.gz"
-      sha256 "5f538caa402dbc2159aebc714839834bef7d7ba0e0f4f6e4e98a3004bed2701c"
+      url "https://github.com/dalmia/calibrate-cli/releases/download/v0.0.76/calibrate-cli_Linux_arm64.tar.gz"
+      sha256 "49a0ae519c0578f6fc65e82838fc23def7a32f7fbf415c2b6063b2079a4f1c36"
       define_method(:install) do
         bin.install "calibrate"
       end
